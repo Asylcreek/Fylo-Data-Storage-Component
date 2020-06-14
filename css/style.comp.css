@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #1d2c67;
+  height: 100vh;
+  background-color: #0c122c;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  grid-template-rows: 95vh 1fr;
+  align-items: center;
+  overflow: hidden; }
+  @media only screen and (max-width: 34.375em) {
+    body {
+      grid-template-columns: 90vw;
+      justify-items: center;
+      justify-content: center; } }
+
+.bg-image {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1; }
+  @media only screen and (max-width: 50em) {
+    .bg-image {
+      height: 100%; } }
+
+.options {
+  background-color: #1d2c67;
+  border-radius: 1rem;
+  border-top-right-radius: 10rem;
+  padding-right: 8rem; }
+  @media only screen and (max-width: 50em) {
+    .options {
+      border-top-right-radius: 13rem;
+      padding-right: 0; } }
+  .options__container {
+    padding: 3.3rem;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (max-width: 50em) {
+      .options__container {
+        padding: 5rem;
+        flex-direction: row;
+        align-items: center; } }
+    @media only screen and (max-width: 34.375em) {
+      .options__container {
+        flex-direction: column;
+        align-items: flex-start; } }
+
+.brand__logo {
+  width: 80%;
+  margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 50em) {
+    .brand__logo {
+      margin-bottom: 0;
+      margin-right: 8rem;
+      width: 40%; } }
+  @media only screen and (max-width: 34.375em) {
+    .brand__logo {
+      width: 50%;
+      margin-bottom: 5rem; } }
+
+.icons {
+  display: flex; }
+  .icons__item {
+    background-color: #0c122c;
+    padding: 3rem;
+    border-radius: .8rem;
+    position: relative; }
+    .icons__item:not(:last-child) {
+      margin-right: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .icons__item:not(:last-child) {
+          margin-right: 3rem; } }
+      @media only screen and (max-width: 34.375em) {
+        .icons__item:not(:last-child) {
+          margin-right: 1.5rem; } }
+  .icons__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40%; }
+
+.storage {
+  align-self: end;
+  border-radius: 1rem;
+  background-color: #1d2c67;
+  color: rgba(221, 219, 255, 0.7);
+  padding: 6rem 4.5rem;
+  position: relative; }
+  @media only screen and (max-width: 50em) {
+    .storage {
+      padding: 7rem 4.5rem; } }
+  .storage__text {
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+    margin-left: -.2rem; }
+    @media only screen and (max-width: 68.75em) {
+      .storage__text {
+        text-align: center; } }
+    .storage__text span {
+      color: #dddbff; }
+  .storage__slider {
+    background-color: #0c122c;
+    width: 100%;
+    padding: .8rem;
+    border-radius: 8rem;
+    position: relative; }
+    .storage__slider::before {
+      content: "";
+      height: 80%;
+      width: 81.5%;
+      margin-left: 3px;
+      border-radius: .8rem;
+      background-image: linear-gradient(to right, #ffa399, #ff4d97);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      left: 0;
+      transform: translateY(-50%); }
+    .storage__slider::after {
+      content: "";
+      height: 60%;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: #dddbff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      left: 81.5%;
+      margin-left: -1rem;
+      transform: translateY(-50%); }
+  .storage__values {
+    color: #dddbff;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: -3rem;
+    display: flex;
+    justify-content: space-between; }
+    .storage__values--start {
+      margin-left: -.2rem; }
+  .storage__tooltip {
+    display: inline-block;
+    background-color: #dddbff;
+    color: #848794;
+    border-radius: 1rem;
+    border-bottom-right-radius: 0;
+    padding: .5rem 1.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: -30%;
+    right: 0;
+    margin-right: 4.5rem; }
+    @media only screen and (max-width: 68.75em) {
+      .storage__tooltip {
+        border-radius: 1rem;
+        margin-right: 0;
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, 70%); } }
+    @media only screen and (max-width: 50em) {
+      .storage__tooltip {
+        transform: translate(50%, 100%); } }
+    .storage__tooltip::after {
+      content: " ";
+      border: solid #dddbff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      pointer-events: none;
+      border-color: rgba(136, 183, 213, 0);
+      border-top-color: #dddbff;
+      border-right-color: #dddbff;
+      border-width: 1rem;
+      margin-top: -.2rem; }
+      @media only screen and (max-width: 68.75em) {
+        .storage__tooltip::after {
+          display: none; } }
+    .storage__tooltip span {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #0c122c;
+      vertical-align: sub;
+      margin-right: .7rem; }
+      @media only screen and (max-width: 68.75em) {
+        .storage__tooltip span {
+          font-size: 3rem; } }
+
+.container {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: minmax(min-content, 0.3fr) 1fr;
+  grid-gap: 4rem;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  width: 95%; }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      width: 100%; } }
+  @media only screen and (max-width: 34.375em) {
+    .container {
+      grid-column: 1 / -1;
+      grid-row: 1 / span 1; } }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #dddbff;
+  grid-column: 2 / span 1;
+  grid-row: 2 / -1; }
+  .attribution a {
+    color: #3e52a3; }
+  @media only screen and (max-width: 34.375em) {
+    .attribution {
+      grid-column: 1 / -1; } }
